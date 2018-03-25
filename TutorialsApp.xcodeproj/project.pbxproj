@@ -13,6 +13,11 @@
 		DE67CAE62068010D0006B06E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE67CAE52068010D0006B06E /* Assets.xcassets */; };
 		DE67CAE92068010D0006B06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE67CAE72068010D0006B06E /* LaunchScreen.storyboard */; };
 		DE67CAEC2068010D0006B06E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67CAEB2068010D0006B06E /* main.m */; };
+		DE67CAF6206801800006B06E /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67CAF5206801800006B06E /* HTTPService.m */; };
+		DE67CAFA206828EB0006B06E /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67CAF9206828EB0006B06E /* VideoCell.m */; };
+		DE67CAFE20682B9E0006B06E /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67CAFD20682B9E0006B06E /* Video.m */; };
+		DE67CB022068331D0006B06E /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DE67CB012068331D0006B06E /* VideoVC.m */; };
+		DE67CB26206842DF0006B06E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE67CB25206842DF0006B06E /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +29,16 @@
 		DE67CAE32068010D0006B06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE67CAE52068010D0006B06E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE67CAE82068010D0006B06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE67CAEA2068010D0006B06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE67CAEB2068010D0006B06E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE67CAF4206801800006B06E /* HTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		DE67CAF5206801800006B06E /* HTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
+		DE67CAF8206828EB0006B06E /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		DE67CAF9206828EB0006B06E /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		DE67CAFC20682B9E0006B06E /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		DE67CAFD20682B9E0006B06E /* Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		DE67CB002068331D0006B06E /* VideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		DE67CB012068331D0006B06E /* VideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		DE67CB25206842DF0006B06E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +71,57 @@
 		DE67CADB2068010D0006B06E /* TutorialsApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE67CAFF206833010006B06E /* Controller */,
+				DE67CAFB20682B8E0006B06E /* Model */,
+				DE67CAF7206828D90006B06E /* View */,
+				DE67CAF3206801630006B06E /* Services */,
 				DE67CADC2068010D0006B06E /* AppDelegate.h */,
 				DE67CADD2068010D0006B06E /* AppDelegate.m */,
-				DE67CADF2068010D0006B06E /* ViewController.h */,
-				DE67CAE02068010D0006B06E /* ViewController.m */,
 				DE67CAE22068010D0006B06E /* Main.storyboard */,
 				DE67CAE52068010D0006B06E /* Assets.xcassets */,
 				DE67CAE72068010D0006B06E /* LaunchScreen.storyboard */,
-				DE67CAEA2068010D0006B06E /* Info.plist */,
 				DE67CAEB2068010D0006B06E /* main.m */,
+				DE67CB25206842DF0006B06E /* Info.plist */,
 			);
 			path = TutorialsApp;
+			sourceTree = "<group>";
+		};
+		DE67CAF3206801630006B06E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DE67CAF4206801800006B06E /* HTTPService.h */,
+				DE67CAF5206801800006B06E /* HTTPService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DE67CAF7206828D90006B06E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE67CAF8206828EB0006B06E /* VideoCell.h */,
+				DE67CAF9206828EB0006B06E /* VideoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE67CAFB20682B8E0006B06E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE67CAFC20682B9E0006B06E /* Video.h */,
+				DE67CAFD20682B9E0006B06E /* Video.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE67CAFF206833010006B06E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE67CADF2068010D0006B06E /* ViewController.h */,
+				DE67CAE02068010D0006B06E /* ViewController.m */,
+				DE67CB002068331D0006B06E /* VideoVC.h */,
+				DE67CB012068331D0006B06E /* VideoVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE67CB26206842DF0006B06E /* Info.plist in Resources */,
 				DE67CAE92068010D0006B06E /* LaunchScreen.storyboard in Resources */,
 				DE67CAE62068010D0006B06E /* Assets.xcassets in Resources */,
 				DE67CAE42068010D0006B06E /* Main.storyboard in Resources */,
@@ -143,6 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE67CAE12068010D0006B06E /* ViewController.m in Sources */,
+				DE67CAFA206828EB0006B06E /* VideoCell.m in Sources */,
+				DE67CAF6206801800006B06E /* HTTPService.m in Sources */,
+				DE67CAFE20682B9E0006B06E /* Video.m in Sources */,
+				DE67CB022068331D0006B06E /* VideoVC.m in Sources */,
 				DE67CAEC2068010D0006B06E /* main.m in Sources */,
 				DE67CADE2068010D0006B06E /* AppDelegate.m in Sources */,
 			);
@@ -280,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX5AU8YC45;
-				INFOPLIST_FILE = TutorialsApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutorialsApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Octavian.TutorialsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX5AU8YC45;
-				INFOPLIST_FILE = TutorialsApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TutorialsApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Octavian.TutorialsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

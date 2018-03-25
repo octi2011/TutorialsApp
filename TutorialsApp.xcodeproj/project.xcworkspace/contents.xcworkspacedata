@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:TutorialsApp.xcodeproj">
+      location = "self:/Users/duminicaoctavian/Documents/iOS/Objective C Mark Price/TutorialsApp/TutorialsApp.xcodeproj">
    </FileRef>
 </Workspace>
